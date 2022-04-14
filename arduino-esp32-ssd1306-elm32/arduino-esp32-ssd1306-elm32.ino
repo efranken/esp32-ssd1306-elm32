@@ -2,6 +2,9 @@
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <SPI.h>
+#include <BluetoothSerial.h>
+#include "ELMduino.h"
+
 
 #define ONBOARD_LED 2
 
