@@ -1,4 +1,4 @@
-include "BluetoothSerial.h"
+#include "BluetoothSerial.h"
 #include "ELMduino.h"
 
 
@@ -21,8 +21,8 @@ void setup()
 #endif
 
   DEBUG_PORT.begin(115200);
-  //SerialBT.setPin("1234");
-  ELM_PORT.begin("ArduHUD", true);
+  SerialBT.setPin("0000");
+  ELM_PORT.begin("OBDII", true);
   
   if (!ELM_PORT.connect("OBDII"))
   {
@@ -52,17 +52,3 @@ void loop()
   else if (myELM327.nb_rx_state != ELM_GETTING_MSG)
     myELM327.printError();
 }
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
